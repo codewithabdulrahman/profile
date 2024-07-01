@@ -28,4 +28,17 @@ export const boxData = [
   },
 ];
 
-
+export const cardData = [
+  {
+    title: "Card 1",
+    description: "Description for card 1",
+  },
+  {
+    title: "Card 2",
+    description: "Description for card 2",
+  },
+  {
+    title: "Card 3",
+    description: "Description for card 3",
+  },
+];
