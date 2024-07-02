@@ -210,7 +210,8 @@ function Home() {
           ))}
         </div>
       </div>
-      <h2> Projets Create Projects</h2>
+      <h1>create Projects</h1>
+      <h1>project</h1>
     </HomeContainer>
   );
 }
