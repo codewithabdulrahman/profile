@@ -6,7 +6,8 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: red;
+  /* background-color: #333; */
   color: #fff;
   padding: 10px 80px;
   position: fixed;
