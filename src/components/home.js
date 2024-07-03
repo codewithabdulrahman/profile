@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
-import { CiDesktopMouse2 } from "react-icons/ci";
 import { boxData } from "./data";
 import { MdArrowDownward } from "react-icons/md";
 const HomeContainer = styled.div`
@@ -19,12 +18,13 @@ const HomeContainer = styled.div`
     color: #93d2bd;
     text-shadow: 3px 3px 2px black;
     height: 200px;
-    font-size: 32px;
     text-align: center;
     margin: 0px auto;
-    margin-top: 50px;
+    margin-top: 85px;
+    letter-spacing: -1px;
     h1 {
       margin: 0px;
+      font-size: 60px;
     }
   }
   #purple {
@@ -32,18 +32,17 @@ const HomeContainer = styled.div`
   }
   .home_project_btn {
     width: 175px;
-    margin-top: 40px;
+    margin: 45px 0px;
     padding: 12px 0px;
     border: 1.5px solid;
     background: linear-gradient(45deg, #93ddc4, #84eda7);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .desktopMouse {
-    margin-top: 72px;
-    font-size: 25px;
-    margin-bottom: 20px;
+    word-spacing: -1px;
+    letter-spacing: -0.3px;
+    -webkit-text-stroke-width: thin;
+
   }
   .home_footer_section {
     display: flex;
@@ -51,11 +50,17 @@ const HomeContainer = styled.div`
     justify-content: space-around;
     width: 100%;
     background-color: #93d2bd;
+    margin-top: 20px;
+    text-transform:uppercase;
+    letter-spacing: 0.8px;
+    font-size: 17px;
   }
-  h3 {
+  .home_footer_section>h4 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       2px 1px 0 #000;
     margin: 9px;
+    font-size: 19px;
+    font-weight: 500;
   }
   h3,
   .section_top {
@@ -72,12 +77,17 @@ const HomeContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 53px;
   }
-  #working_feature > h1 {
+  #working_feature > h4 {
     color: #93d2bd;
-    width: 85%;
+    width: 84%;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       2px 1px 0 #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 31px;
+      font-weight: 500;
   }
 
   #inner_box {
@@ -97,20 +107,28 @@ const TextContent = styled.div`
   text-align: center;
   margin-top: 20px;
   line-height: 0.9;
+  -webkit-text-stroke-width: thin;
+  word-spacing: -1px;
+  p{
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
 `;
-const Box = styled.div`
+const ContainerBox = styled.div`
   border: 1px solid black;
+  border-radius: 0;
   padding: 20px;
   margin: 10px;
   text-align: center;
   background: linear-gradient(170deg, #ffebca, #f6e6f9);
   text-align: start;
-  height: 380px;
+  height: 410px;
   display: flex;
   align-items: start;
   justify-content: end;
   flex-direction: column;
   box-shadow: 2px 2px 1px black;
+
 
   .box_image {
     font-size: 26px;
@@ -125,10 +143,11 @@ const Box = styled.div`
     padding: 0px 8px;
     margin: 16px 1px;
     box-shadow: 2px 2px 1px black;
+    -webkit-text-stroke: thin;
   }
   #card_button {
-    width: 87px;
-    height: 34px;
+    width: 96px;
+    height: 31px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +169,7 @@ function Home() {
           SALES <span id="purple">ENSURED</span> BY
         </h1>
         <h1>
-          <span id="purple">REMARABLE</span> DESIGN{" "}
+          <span id="purple">REMARKABLE</span> DESIGN{" "}
         </h1>
       </div>
       <TextContent>
@@ -160,43 +179,42 @@ function Home() {
         <p>are optimized for performance and user experience </p>
       </TextContent>
       <button className="home_project_btn">
-        Click The Projects <FaArrowRight />
+        Click The Projects <FaArrowRight style={{marginLeft:"5px"}}/>
       </button>
 
-      <CiDesktopMouse2 className="desktopMouse" />
       <div className="home_footer_section">
-        <h3>
+        <h4>
           <span className="section_top">Animations &</span>
           <br />
           <span className="section_bottom">intractions</span>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           <span className="section_top">Responsive</span>
           <br />
           <span className="section_bottom" style={{ color: "#D9943A" }}>
             Design
           </span>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           <span className="section_top">Branding &</span>
           <br />
           <span className="section_bottom">Identity</span>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           <span className="section_top">Webflow &</span>
           <br />
           <span className="section_bottom" style={{ color: "#D9943A" }}>
             Development
           </span>
-        </h3>
+        </h4>
       </div>
       <div id="working_feature">
-        <h1>
+        <h4>
           Working <span id="purple">Features</span>
-        </h1>
+        </h4>
         <div id="inner_box">
           {boxData.map((box, index) => (
-            <Box key={index} className="box card">
+            <ContainerBox key={index} className="box card">
               <span className="box_image">{box.icon}</span>
               <div className="card_text">
                 <h4>{box.innerBox.heading}</h4>
@@ -206,7 +224,7 @@ function Home() {
               <button id="card_button">
                 {box.button}<MdArrowDownward />
               </button>
-            </Box>
+            </ContainerBox>
           ))}
         </div>
       </div>
