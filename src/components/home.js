@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import { boxData } from "./data";
 import { MdArrowDownward } from "react-icons/md";
+import Projects from "./Projects";
+import About from "./About";
+import EdactionStudies from "./EducationStudies";
 const HomeContainer = styled.div`
   display: flex;
   align-items: center;
@@ -25,6 +28,9 @@ const HomeContainer = styled.div`
     h1 {
       margin: 0px;
       font-size: 60px;
+      @media (max-width:550px) {
+font-size:40px;
+    }
     }
   }
   #purple {
@@ -33,7 +39,7 @@ const HomeContainer = styled.div`
   .home_project_btn {
     width: 175px;
     margin: 45px 0px;
-    padding: 12px 0px;
+    padding: 6px 0px;
     border: 1.5px solid;
     background: linear-gradient(45deg, #93ddc4, #84eda7);
     display: flex;
@@ -42,6 +48,7 @@ const HomeContainer = styled.div`
     word-spacing: -1px;
     letter-spacing: -0.3px;
     -webkit-text-stroke-width: thin;
+    font-size: 14px;
 
   }
   .home_footer_section {
@@ -54,6 +61,10 @@ const HomeContainer = styled.div`
     text-transform:uppercase;
     letter-spacing: 0.8px;
     font-size: 17px;
+    @media (max-width:601px) {
+      flex-direction: column;
+      gap: 15px;  
+      }
   }
   .home_footer_section>h4 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -97,6 +108,11 @@ const HomeContainer = styled.div`
     width: 85%;
     margin: 0 auto;
   }
+  @media (max-width:940px) {
+    #inner_box {
+      flex-direction: column;
+  }
+    }
 `;
 const TextContent = styled.div`
   border: 2px solid black;
@@ -109,6 +125,9 @@ const TextContent = styled.div`
   line-height: 0.9;
   -webkit-text-stroke-width: thin;
   word-spacing: -1px;
+  @media (max-width:550px) {
+    margin: 0px 13px
+      }
   p{
     margin-top:10px;
     margin-bottom: 10px;
@@ -129,7 +148,12 @@ const ContainerBox = styled.div`
   flex-direction: column;
   box-shadow: 2px 2px 1px black;
 
-
+  @media (max-width:940px) {
+width:80%;
+    }
+  @media (max-width:430px) {
+width:95%;
+    }
   .box_image {
     font-size: 26px;
     box-shadow: 2px 2px 1px black;
@@ -144,7 +168,11 @@ const ContainerBox = styled.div`
     margin: 16px 1px;
     box-shadow: 2px 2px 1px black;
     -webkit-text-stroke: thin;
+    height: 170px;
+   
   }
+ 
+
   #card_button {
     width: 96px;
     height: 31px;
@@ -159,6 +187,8 @@ const ContainerBox = styled.div`
   h4{
     margin: 8px 0px;
   }
+
+
 `;
 
 function Home() {
@@ -222,14 +252,16 @@ function Home() {
               </div>
 
               <button id="card_button">
-                {box.button}<MdArrowDownward />
+                {box.button} <MdArrowDownward style={{marginTop:'3px'}} />
               </button>
             </ContainerBox>
           ))}
         </div>
       </div>
-      <h1>project</h1>
-    </HomeContainer>
+      <Projects />
+      <About />
+      <EdactionStudies />
+          </HomeContainer>
   );
 }
 

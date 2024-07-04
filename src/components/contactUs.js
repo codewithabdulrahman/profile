@@ -25,6 +25,12 @@ const ContactForm = styled.div`
     border: 1px solid #ddd;
     text-indent: 10px;
   }
+  @media (max-width:766px) {
+    .p-5 {
+    padding: 1rem !important;
+}
+    }
+
 `;
 
 function ContactUs() {

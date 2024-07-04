@@ -24,6 +24,10 @@ const NavButton = styled.button`
   &:focus {
     border-bottom: 3px solid;
   }
+
+  @media (max-width:450px) {
+font-size:15px;
+    }
 `;
 
 const Header = () => {
