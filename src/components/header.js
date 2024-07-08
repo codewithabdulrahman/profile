@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../Assets/logo.jpg";
+import logo from "../Assets/logo1.PNG";
 import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 
 const Logo = styled.img`
   width: 130px;
   height: auto;
+  margin-top:12px;
 `;
 
 const NavButton = styled.button`
@@ -17,6 +18,8 @@ const NavButton = styled.button`
   cursor: pointer;
   margin-left: 15px;
   padding: 12px 1px;
+  border-bottom: 3px solid #161513;
+
 
   &:hover {
     border-bottom: 3px solid;
@@ -34,7 +37,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <Navbar fixed="top" expand="lg" style={{width:'100%', background:'#161513', display:'flex',alignItems:'center', justifyContent:'space-between', padding: '9px 20px'}}>
+    <Navbar fixed="top" expand="lg" style={{width:'100%', background:'#161513', display:'flex',alignItems:'center', justifyContent:'space-between', padding: '10px 20px', }}>
       <div id="left_nav">
       <Navbar.Brand href="#" style={{position:'fixed', top:'2px'}}><Logo src={logo} alt="Logo" /></Navbar.Brand>
 

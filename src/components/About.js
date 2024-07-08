@@ -79,6 +79,10 @@ img{
     border: 2px solid black;
     padding: 8px;
     background-color: #F6F6F5;
+    &:hover {
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
 }
 `;
 function About() {

@@ -6,6 +6,10 @@ import { MdArrowDownward } from "react-icons/md";
 import Projects from "./Projects";
 import About from "./About";
 import EdactionStudies from "./EducationStudies";
+import WorkExperience from './WorkExperience'
+import DreamEasy from './DreamEasy'
+import WorkSkills from './WorkSkills'
+import ClientFeedback from './ClientFeedback'
 const HomeContainer = styled.div`
   display: flex;
   align-items: center;
@@ -48,8 +52,15 @@ font-size:40px;
     word-spacing: -1px;
     letter-spacing: -0.3px;
     -webkit-text-stroke-width: thin;
-    font-size: 14px;
+    transition: background-color 3s, transform 3s;
 
+    font-size: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+&:hover {
+  transform: scale(1.09); 
+  box-shadow: 2px 2px 12px black;
+}
   }
   .home_footer_section {
     display: flex;
@@ -107,6 +118,7 @@ font-size:40px;
     justify-content: center;
     width: 85%;
     margin: 0 auto;
+
   }
   @media (max-width:940px) {
     #inner_box {
@@ -147,7 +159,10 @@ const ContainerBox = styled.div`
   justify-content: end;
   flex-direction: column;
   box-shadow: 2px 2px 1px black;
-
+  &:hover {
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
   @media (max-width:940px) {
 width:80%;
     }
@@ -181,8 +196,13 @@ width:95%;
     justify-content: center;
     margin-top: 15px;
     border: 1.5px solid;
-    box-shadow: 2px 2px 1px black;
     background: linear-gradient(45deg, #93ddc4, #84eda7);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+&:hover {
+  transform: scale(1.09); 
+  box-shadow: 2px 2px 12px black;
+}
   }
   h4{
     margin: 8px 0px;
@@ -261,6 +281,10 @@ function Home() {
       <Projects />
       <About />
       <EdactionStudies />
+      <WorkExperience />
+      <DreamEasy />
+      <WorkSkills />
+      <ClientFeedback />
           </HomeContainer>
   );
 }

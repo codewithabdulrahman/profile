@@ -1,14 +1,18 @@
 import React from "react";
 import { FaUserGraduate } from "react-icons/fa";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+// move the dive from left to actual position
+const moveLeft = keyframes`
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+`;
 const EducationContainer = styled.div`
   width: 100%;
   display: flex;
   box-sizing: border-box;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 60px;
   position: relative;
   z-index: 1;
   background-color: rgba(246, 167, 209, 0.7);
@@ -20,13 +24,18 @@ const EducationContainer = styled.div`
     letter-spacing: 1px;
     font-size: 31px;
     font-weight: 500;
+    width: 83%;
+    margin:  12px auto;
   }
   `
 
 const StyledCardContainer = styled.div`
-  width: 100%;
+  width: 85%;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
+  animation: ${moveLeft} 2s linear ;
+
   @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -87,6 +96,10 @@ const CardBox = styled.div`
   gap: 20px;
   border: 1.5px solid black;
   height: 520px;
+  &:hover {
+  transition: all 0.3s ease;
+  box-shadow: 6px 8px 9px 10px rgba(0, 0, 0, 0.6);
+}
 `;
 
 const ImageBox = styled.div`
@@ -126,6 +139,10 @@ const DurationStudy = styled.div`
   border: 1px solid black;
   box-shadow: 2px 2px 0px black;
   background-color: #FBB9A2;
+  &:hover {
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
   span {
     font-size: 15px;
     font-weight: 600;

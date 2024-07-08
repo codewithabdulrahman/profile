@@ -72,6 +72,12 @@ width:100%;
     -webkit-text-stroke-width: thin;
     font-size: 15px;
     margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+&:hover {
+  transform: scale(1.09); 
+  box-shadow: 2px 2px 12px black;
+}
     @media (max-width: 750px) {
         display: none;
 }
@@ -101,6 +107,13 @@ margin-top: 10px;
     -webkit-text-stroke-width: thin;
     font-size: 15px;
     margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+
+&:hover {
+  transform: scale(1.09); 
+  box-shadow: 2px 2px 12px black;
+}
     @media (max-width: 750px) {
         display: block;
 }
@@ -115,7 +128,11 @@ const ProjectCard = styled.div`
     height: auto;
     background: linear-gradient(170deg, #ffebca, #f6e6f9);
     box-shadow: 2px 2px 0px black;
+    transition: transform 0.3s, box-shadow 0.3s;
 
+&:hover {
+  box-shadow: 2px 2px 12px black;
+}
     #card_heading{
         color: #7CB69E;
         margin: 0;
@@ -190,10 +207,13 @@ const ProjectButton = styled.button`
   background-color: #FBB9A2;
   border: 1px solid;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 
-  &:hover {
-    background-color: #FBB1A1;
+&:hover {
+  transform: scale(1.09); 
+  box-shadow: 2px 2px 12px black;
 }
+
 `;
 
 const Projects = () => {
